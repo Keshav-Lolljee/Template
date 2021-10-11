@@ -248,7 +248,14 @@
     }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 430px) {
+
+    .content-wrapper label {
+        padding-top: var(--content-wrap-label-padTop);
+        margin-bottom: var(--content-wrap-label-margin);
+        font-weight: bold;
+        width: 180px;
+    }
 
     .content-wrapper {
         text-align: center;
@@ -260,7 +267,6 @@
     .search-bar-wrapper {
         display: flex;
         justify-content: left;
-        gap: 5%;
     }
     .search-bar {
         width: 45vw;
@@ -269,6 +275,6 @@
         max-width: 50%;
     }
     .inner-list {
-        min-width: 48vw;
+        min-width: 45vw;
     }
 }

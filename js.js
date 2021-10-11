@@ -34,13 +34,23 @@ function collapseBtn2() {
     if (checkCollapse2) {
         document.getElementById("collapse-Btn2").classList.remove("inverseCollapse");
         document.getElementById("collapse-Btn2").classList.remove("resetCollapse");
+        document.getElementById("inner-list2").classList.remove("hideList");
+        document.getElementById("inner-list2").classList.remove("showList");
+
         document.getElementById("collapse-Btn2").classList.add("inverseCollapse");
+        document.getElementById("inner-list2").classList.add("showList");
+
         checkCollapse2 = false;
     }
     else if (!checkCollapse2) {
         document.getElementById("collapse-Btn2").classList.remove("inverseCollapse");
         document.getElementById("collapse-Btn2").classList.remove("resetCollapse");
+        document.getElementById("inner-list2").classList.remove("hideList");
+        document.getElementById("inner-list2").classList.remove("showList");
+
         document.getElementById("collapse-Btn2").classList.add("resetCollapse");
+        document.getElementById("inner-list2").classList.add("hideList");
+
         checkCollapse2 = true;
     }
     

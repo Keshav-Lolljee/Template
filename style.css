@@ -1,14 +1,19 @@
+
 * {
     padding: 0;
     margin: 0;
     transition: all 0.15s ease;
 }
 
+hr {
+
+}
+
 :root {
     /* Heading Variables */
     --head-size: 25px;
-    --head-wrap-margin: 4% 0 0 0;
-    --head-wrap-padding: 2% 0;
+    --head-wrap-margin: 0% 0 0 0;
+    --head-wrap-padding: 0.5% 0;
     /* Outer Wrapper Variables */
     --outer-wrap-width: 60vw;
     --outer-wrap-radius: 10px;
@@ -17,12 +22,12 @@
     --content-gap: 5%;
     --content-wrap-label-margin: 5%;
     --content-wrap-label-padTop: 1.2vh;
-    --search-bar-height: 30px; 
-    --search-bar-width: 25vw; 
+    --search-bar-height: 30px;
+    --search-bar-width: 25vw;
     --inner-list-margin: 5% 0 10% 0;
     --inner-list-width: 23.5vw;
     --inner-list-height: 180px;
-    --dropdown-btn-url: url(collapsibleDark.png) ;
+    --dropdown-btn-url: url(../image/collapsibleDark.png);
     /* Animation Variables */
     --inner-list-close: 5%;
     --inner-list-close-height: 0;
@@ -50,9 +55,29 @@
     0% {
         transform: rotateZ(180deg);
     }
+
     100% {
         transform: rotateZ(0deg);
     }
+}
+
+/*--------- Scrollbar Style ---------*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 13px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(54, 56, 58);
 }
 
 /*--------- Inner List Hide/Show ---------*/
@@ -73,6 +98,7 @@
         height: var(--inner-list-height);
         margin: var(--inner-list-margin);
     }
+
     100% {
         height: 0;
         visibility: hidden;
@@ -87,6 +113,7 @@
         height: 0;
         margin-bottom: var(--inner-list-close);
     }
+
     100% {
         visibility: visible;
         display: block;
@@ -103,9 +130,9 @@
     margin: var(--head-wrap-margin);
 }
 
-.head-wrapper p {
-    padding: var(--head-wrap-padding);
-}
+    .head-wrapper p {
+        padding: var(--head-wrap-padding);
+    }
 
 /* ---------------------------- Page Content ----------------------------*/
 .outer-wrapper {
@@ -133,16 +160,16 @@
     gap: var(--content-gap);
 }
 
-.content-wrapper ul li{
-    list-style: none;
-}
+    .content-wrapper ul li {
+        list-style: none;
+    }
 
-.content-wrapper label {
-    padding-top: var(--content-wrap-label-padTop);
-    margin-bottom: var(--content-wrap-label-margin);
-    font-weight: bold;
-    width: 150px;
-}
+    .content-wrapper label {
+        padding-top: var(--content-wrap-label-padTop);
+        margin-bottom: var(--content-wrap-label-margin);
+        font-weight: bold;
+        width: 150px;
+    }
 
 /* ----------- Search Bar -----------*/
 .search-bar-wrapper {
@@ -153,7 +180,7 @@
     justify-content: left;
 }
 
-.search-bar{
+.search-bar {
     width: var(--search-bar-width);
     margin-right: 5%;
     height: auto;
@@ -194,6 +221,16 @@
     padding: 4%;
 }
 
+.inner-list li:not(:last-child) {
+    border-bottom: 0.5px solid black;
+}
+
+.inner-list li:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+
 /* ----------- Buttons -----------*/
 .button-wrapper {
     margin-top: 10%;
@@ -217,9 +254,9 @@
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-  }
-  
-  .btnStyle:after {
+}
+
+.btnStyle:after {
     content: "";
     background: #f1f1f1;
     display: block;
@@ -230,20 +267,19 @@
     margin-top: -120%;
     opacity: 0;
     transition: all 0.8s
-  }
-  
-  .btnStyle:active:after {
-      
+}
+
+.btnStyle:active:after {
     border-radius: 50px;
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s
-  }
+}
 
 @media only screen and (max-width: 612px) {
     :root {
-        --search-bar-width: 45vw; 
+        --search-bar-width: 45vw;
         --inner-list-width: 40vw;
     }
 }
@@ -264,16 +300,20 @@
         justify-content: center;
         gap: var(--content-gap);
     }
+
     .search-bar-wrapper {
         display: flex;
         justify-content: left;
     }
+
     .search-bar {
         width: 45vw;
     }
+
     .outer-list {
         max-width: 50%;
     }
+
     .inner-list {
         min-width: 45vw;
     }
